@@ -33,3 +33,18 @@ func (ot OperationType) GetDescription() (string, error) {
 		return "", errors.New("invalid operation type")
 	}
 }
+
+// ConvertToType - function will convert and return int value of enum operation type to enum value.
+func ConvertToType(oType int) OperationType {
+	return OperationType(oType)
+}
+
+// IsValid - function will return if transaction operation type is valid or not.
+func IsValid(oType int) bool {
+	switch ConvertToType(oType) {
+	case 1, 2, 3, 4:
+		return true
+	default:
+		return false
+	}
+}
