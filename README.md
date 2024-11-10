@@ -4,29 +4,29 @@ user accounts and financial transactions in an in-memory store. The application 
 
 ## Features
 ### Account Management:
-Create a new account
-Retrieve account information
+* Create a new account
+* Retrieve account information
 ### Transaction Management:
-Create a financial transaction with various operation types, including purchase, installment purchase, withdrawal, and 
-credit voucher.
+* Create a financial transaction with various operation types, including purchase, installment purchase, withdrawal, and 
+* credit voucher.
 
 ## Prerequisites:
-Go 1.18+
-Docker
+* Go 1.18+
+* Docker
 
 ## Getting Started
 1. Clone the Repository
-   >git clone <repository-url>
+   >git clone https://github.com/19shubham/transactions-routines
 
-   >cd <repository-name>
+   >cd "transactions-routines"
 
 2. Build and Run with Docker
 
    Build the Docker Image
-   >docker build -t echo-app .
+   >docker build -t transactions-routines .
 
    Run the Docker Container
-   > docker run -p 8080:8080 echo-app
+   > docker run -p 8080:8080 transactions-routines
 
    The API will be accessible at http://localhost:8080.
 

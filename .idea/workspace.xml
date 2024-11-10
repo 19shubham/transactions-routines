@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6c809c46-3c19-4e6c-a8ff-2b20d9be3e15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/accounts.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handlers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/input.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transactions-routines.Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/transactions.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/OperationsType.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/operation-type.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/account.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/account.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/transaction.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/transaction.go" afterDir="false" />
-    </list>
+    <list default="true" id="6c809c46-3c19-4e6c-a8ff-2b20d9be3e15" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
