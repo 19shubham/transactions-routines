@@ -2,14 +2,15 @@
 FROM golang:1.18-alpine AS builder
 
 # Set environment variables
+ENV HOME /app
 ENV GO111MODULE=on
-WORKDIR /app
+WORKDIR ${HOME}
 
 # Install dependencies and build the application
 COPY go.mod go.sum ./
 RUN go mod download
 COPY . .
-RUN go build -o transactions-routines .
+RUN go build -o main .
 
 # Stage 2: Run the Go application
 FROM alpine:latest
@@ -18,10 +19,10 @@ FROM alpine:latest
 WORKDIR /root/
 
 # Copy the built application from the builder stage
-COPY --from=builder /app/transactions-routines .
+COPY --from=builder /app/main .
 
 # Expose port 8080
 EXPOSE 8080
 
 # Run the binary
-CMD ["./transactions-routines"]
+CMD ["./main"]
