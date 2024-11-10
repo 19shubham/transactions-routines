@@ -1,20 +1,20 @@
-### transactions-routines
+# transactions-routines
 This project is a RESTful API built with Go and the Echo framework. The API provides basic functionality for managing 
 user accounts and financial transactions in an in-memory store. The application is containerized with Docker.
 
-### Features
-# Account Management:
+## Features
+### Account Management:
 Create a new account
 Retrieve account information
-# Transaction Management:
+### Transaction Management:
 Create a financial transaction with various operation types, including purchase, installment purchase, withdrawal, and 
 credit voucher.
 
-### Prerequisites:
+## Prerequisites:
 Go 1.18+
 Docker
 
-### Getting Started
+## Getting Started
 1. Clone the Repository
    >git clone <repository-url>
 
@@ -30,9 +30,9 @@ Docker
 
    The API will be accessible at http://localhost:8080.
 
-### API Documentation
+## API Documentation
 1. Create Account - 
-   # Endpoint: POST /accounts
+   #### Endpoint: POST /accounts
    Description: Creates a new account with a unique document number.
    Request Body:
    {
@@ -45,7 +45,7 @@ Docker
    }
 
 2. Get Account by ID
-   # Endpoint: GET /accounts/:accountId
+   #### Endpoint: GET /accounts/:accountId
    Description: Retrieves the account information for the specified account Id.
    Param- Id is auto id of account for which information needs to be fetched.
    Response:
@@ -55,7 +55,7 @@ Docker
    }
 
 3. Create Transaction
-   # Endpoint: POST /transactions
+   #### Endpoint: POST /transactions
    Description: Creates a financial transaction for a specific account.
    Request Body:
    {
