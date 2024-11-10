@@ -15,18 +15,16 @@ var (
 )
 
 // CreateAccount creates a new account with the specified document number.
-func CreateAccount(documentNumber string) *models.Account {
+func CreateAccount(documentNumber string) error {
 	accountMutex.Lock()
 	defer accountMutex.Unlock()
-	
-	account := &models.Account{
+	accountsData[accountIDCounter] = &models.Account{
 		ID:             accountIDCounter,
 		DocumentNumber: documentNumber,
 	}
-	accountsData[accountIDCounter] = account
 	accountIDCounter = accountIDCounter + 1
-	log.Printf("Account created: %+v\n", account)
-	return account
+	log.Print("Account created successfully")
+	return nil
 }
 
 // GetAccount retrieves an account by its ID. Returns an error if the account is not found.

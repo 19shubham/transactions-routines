@@ -15,9 +15,11 @@ func CreateAccountHandler(c echo.Context) error {
 	if err := c.Bind(&request); err != nil {
 		return c.JSON(http.StatusBadRequest, map[string]string{"error": "Invalid request body"})
 	}
-	
-	account := CreateAccount(request.DocumentNumber)
-	return c.JSON(http.StatusCreated, account)
+	err := CreateAccount(request.DocumentNumber)
+	if err != nil {
+		return c.JSON(http.StatusInternalServerError, map[string]string{"error": err.Error()})
+	}
+	return c.JSON(http.StatusCreated, "Success")
 }
 
 // GetAccountHandler retrieves account details by account ID.
@@ -42,10 +44,10 @@ func CreateTransactionHandler(c echo.Context) error {
 		return c.JSON(http.StatusBadRequest, map[string]string{"error": "Invalid request body"})
 	}
 	
-	transaction, err := CreateTransaction(request.AccountID, request.OperationTypeID, request.Amount)
+	err := CreateTransaction(request.AccountID, request.OperationTypeID, request.Amount)
 	if err != nil {
 		return c.JSON(http.StatusBadRequest, map[string]string{"error": err.Error()})
 	}
 	
-	return c.JSON(http.StatusCreated, transaction)
+	return c.JSON(http.StatusCreated, "Success")
 }

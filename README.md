@@ -7,8 +7,7 @@ user accounts and financial transactions in an in-memory store. The application 
 * Create a new account
 * Retrieve account information
 ### Transaction Management:
-* Create a financial transaction with various operation types, including purchase, installment purchase, withdrawal, and 
-* credit voucher.
+* Create a financial transaction with various operation types, including purchase, installment purchase, withdrawal, and credit voucher.
 
 ## Prerequisites:
 * Go 1.18+
@@ -39,10 +38,7 @@ user accounts and financial transactions in an in-memory store. The application 
    "document_number": "12345678900"
    }
    Response:
-   {
-   "account_id": 1,
-   "document_number": "12345678900"
-   }
+   Success
 
 2. Get Account by ID
    #### Endpoint: GET /accounts/:accountId
@@ -64,10 +60,4 @@ user accounts and financial transactions in an in-memory store. The application 
    "amount": 100.0
    }
    Response:
-   {
-   "transaction_id": "unique-uuid",
-   "account_id": 1,
-   "operation_type_id": 1,
-   "amount": -100.0,
-   "event_date": "2024-01-01T12:00:00Z"
-   }
+   Success/False
