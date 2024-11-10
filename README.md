@@ -15,9 +15,9 @@ user accounts and financial transactions in an in-memory store. The application 
 
 ## Getting Started
 1. Clone the Repository
-   >git clone https://github.com/19shubham/transactions-routines
+   >git clone $repo-url$
 
-   >cd "transactions-routines"
+   >cd $repo-name$"
 
 2. Build and Run with Docker
 
@@ -38,7 +38,7 @@ user accounts and financial transactions in an in-memory store. The application 
    "document_number": "12345678900"
    }
    Response:
-   Success
+   Success/Error 
 
 2. Get Account by ID
    #### Endpoint: GET /accounts/:accountId
@@ -60,4 +60,4 @@ user accounts and financial transactions in an in-memory store. The application 
    "amount": 100.0
    }
    Response:
-   Success/False
+   Success/Error
